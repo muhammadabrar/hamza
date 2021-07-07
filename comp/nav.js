@@ -7,7 +7,7 @@ export default function Nav(props) {
                 <div>
                     <div className="contact-info">
 
-                        <i className="fas fa-map-marker-alt"></i> <p className="email">Unit 1, Chancerygate Industrial Cent, Horton close, West Drayton UB7 8EW. United Kingdom</p>
+                        <i className="fas fa-map-marker-alt"></i> Unit 1, Chancerygate Industrial Cent, Horton Close, West Drayton UB7 8EW. United Kingdom
                     </div>
                 </div>
             </section>
