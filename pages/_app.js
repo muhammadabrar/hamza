@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     <Head>
       
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <title>Tested - ECU Solution</title>
+      <title>24 Hours Italian Restaurant</title>
       <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" />
     </Head>
     <body className="body">
