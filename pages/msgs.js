@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Nav from '../comp/nav'
 import Hero from '../comp/otherhero'
 import Footer from '../comp/footer'
-import Contact from '../comp/contact'
+import Messages from '../comp/msgs'
 
 
 
@@ -11,14 +11,16 @@ import Contact from '../comp/contact'
 
 
 
-export default function Menu() {
 
+export default function Msgs() {
+  
+  
 
   return (
 <>
   <Nav active="contact"/>   
-  <Hero Page="Contact"/>
- <Contact />
+  <Hero Page="Customers Messages"/>
+    <Messages />
   <Footer />
 
 </>
