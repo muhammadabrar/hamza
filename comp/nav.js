@@ -6,7 +6,8 @@ export default function Nav(props) {
             <section id="topbar" >
                 <div>
                     <div className="contact-info">
-                        <i className="fas fa-home"></i> <a href="mailto:contact@example.com" className="email">info@example.com</a>
+
+                        <i className="fas fa-map-marker-alt"></i> Unit 1, Chancerygate Industrial Cent, Horton close, West Drayton UB7 8EW. United Kingdom
                     </div>
                 </div>
             </section>

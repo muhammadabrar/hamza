@@ -103,6 +103,7 @@ section {
   display: inline-block;
   line-height: 1px;
   transition: 0.3s;
+  width: 100%;
 }
 #topbar .social-links a:hover {
   color: #fff;
