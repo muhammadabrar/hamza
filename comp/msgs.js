@@ -6,21 +6,24 @@ export default function Contact(props) {
       
   const [err, setErr] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [data, setData] = useState([])
 
-    useEffect(() => {
-        const getmsgs = async()=>{
-            const req = await axios.get('./api/getmsgs')
-            .then(res => {
-              
-              if(res.err){
-                setErr(true)
-              }else{
-                setSuccess(true);
-              }
-            })
-        }
-        getmsgs()
-    }, []);
+
+  useEffect(() => {
+    async function fetchdata() {
+        const req = await axios.get(`./api/getmsgs`).then(response => {
+            setData(response.data.results)
+  console.log(data)
+  
+            return req;
+        }).catch(err => {
+            // what now?
+            console.log("staffs api err to get staff data");
+            console.log(err);
+        })
+    }
+    fetchdata()
+  }, []);
 
 
 
@@ -50,61 +53,29 @@ export default function Contact(props) {
         </div>
         <table id="customers">
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>#</th>
+    <th>Name</th>
+    <th>Date</th>
+    <th>message</th>
   </tr>
+  {data.map((data, index)=>{return(
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Königlich Essen</td>
-    <td>Philip Cramer</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>Simon Crowther</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-  </tr>
-</table>
+  <td>{index+1}</td>
+  <td>{data.name} <br></br>
+<a href={"mailto:"+data.email}>{data.email}</a>
+  <br></br>
+  {data.phone}
+
+  </td>
+  <td>{data.date}</td>
+  <td>{data.msg}</td>
+
+</tr>)
+}
+  )}
+  
+ </table>
+
 
     </div>
     

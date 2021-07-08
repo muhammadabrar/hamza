@@ -3,9 +3,12 @@ const prisma = new PrismaClient();
 export default async function handle(req, res) {
     const results = await prisma.post.findMany({
         
-        take: 10,
+        orderBy: {
+            id: 'desc',
+          },
         
       })
-      res.json(results)
+      console.log(results)
+      res.json({results})
   }
 
