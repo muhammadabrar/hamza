@@ -1,10 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Nav from '../comp/nav'
-import Hero from '../comp/hero'
+import Hero from '../comp/otherhero'
 import Footer from '../comp/footer'
-import Contact from '../comp/contact'
-import Timing from '../comp/time'
 import AboutComp from '../comp/about'
 
 
@@ -12,18 +10,16 @@ import AboutComp from '../comp/about'
 
 
 
-export default function App() {
+
+export default function About() {
   
   
 
   return (
 <>
-  <Nav active="home"/>     
-  <Hero />
-  <Timing />
+  <Nav active="about"/>   
+  <Hero Page="About"/>
  <AboutComp />
-
-  <Contact />
   <Footer />
 
 </>

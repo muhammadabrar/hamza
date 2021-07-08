@@ -21,11 +21,10 @@ export default function Nav(props) {
                     </span>
                     
                     <ul>
-                        <li><a className="active" href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Feedback</a></li>
+                        <li><a className={props.active == "home"? "active": ""} href="/">Home</a></li>
+                        <li><a href="/about" className={props.active == "about"? "active": ""}>About</a></li>
+                        <li><a href="/menu" className={props.active == "menu"? "active": ""}>Menu</a></li>
+                        <li><a href="/contact" className={props.active == "contact"? "active": ""}>Contact</a></li>
                     </ul>
                 </nav>
             </header>
