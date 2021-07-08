@@ -17,7 +17,9 @@ export default function Nav(props) {
                     <label for="check" className="checkbtn">
                         <i className="fas fa-bars"></i>
                     </label>
-                    <label className="logo"><span className="logo24">24</span> Hours Italian Restaurant</label>
+                    <span className="logo"><span className="logo24">24</span> Hours Italian Restaurant
+                    </span>
+                    
                     <ul>
                         <li><a className="active" href="#">Home</a></li>
                         <li><a href="#">About</a></li>
